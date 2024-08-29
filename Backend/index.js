@@ -5,6 +5,11 @@ import path from 'path';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import helmet from 'helmet';
+import Contact from './src/routes/contact.js'
+import Media from './src/routes/media.js'
+import General from './src/routes/general.js'
+import Give from './src/routes/give.js'
+
 
 dotenv.config();
 
