@@ -3,7 +3,6 @@ import { Box, useMediaQuery } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MyNavBar from '../../Components/MenuBars/NavBar';
-import Sidebar from "Components/NavBars/SideBar";
 
 const Layout = () => {
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
@@ -25,3 +24,5 @@ const Layout = () => {
 };
 
 export default Layout;
+
+
