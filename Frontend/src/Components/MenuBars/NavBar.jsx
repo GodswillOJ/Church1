@@ -94,7 +94,7 @@ function MyNavBar() {
         }}
       >
         <Typography variant='body1' sx={{ fontStyle: 'italic', fontSize: isMobile ? '16px' : '18px' }}>
-          GOGOtech_church
+          GOtech_church
         </Typography>
 
         {isMobile ? (
