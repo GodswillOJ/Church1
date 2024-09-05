@@ -41,45 +41,94 @@ function MyNavBar() {
     <Box
       sx={{ width: 250 }}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}  // Keep this to close on key presses
     >
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
           <ListItemText primary="Home" />
         </ListItem>
+        
         <ListItem button onClick={handleAboutClick}>
           <ListItemText primary="About" />
         </ListItem>
-        <Menu anchorEl={aboutAnchorEl} open={Boolean(aboutAnchorEl)} onClose={handleClose}>
-          <MenuItem component={Link} to="/about/our-mission" onClick={handleClose}>Our Mission</MenuItem>
-          <MenuItem component={Link} to="/about/our-vision" onClick={handleClose}>Our Vision</MenuItem>
-          <MenuItem component={Link} to="/about/our-hope" onClick={handleClose}>Our Hope</MenuItem>
+        <Menu 
+        anchorEl={aboutAnchorEl} 
+        open={Boolean(aboutAnchorEl)} 
+        onClose={handleClose}
+        sx={{
+          marginLeft: '10px'
+        }}
+        >
+          <MenuItem component={Link} to="/about/our-mission" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Our Mission
+          </MenuItem>
+          <MenuItem component={Link} to="/about/our-vision" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Our Vision
+          </MenuItem>
+          <MenuItem component={Link} to="/about/our-hope" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Our Hope
+          </MenuItem>
         </Menu>
-
+  
         <ListItem button onClick={handleMediaClick}>
           <ListItemText primary="Media" />
         </ListItem>
-        <Menu anchorEl={mediaAnchorEl} open={Boolean(mediaAnchorEl)} onClose={handleClose}>
-          <MenuItem component={Link} to="/media/online-store" onClick={handleClose}>Online Store</MenuItem>
-          <MenuItem component={Link} to="/media/live-tv" onClick={handleClose}>Live TV</MenuItem>
-          <MenuItem component={Link} to="/media/e-books" onClick={handleClose}>E-Books</MenuItem>
+        <Menu 
+        anchorEl={mediaAnchorEl} 
+        open={Boolean(mediaAnchorEl)} 
+        onClose={handleClose}
+          sx={{
+            marginLeft: '10px'
+          }}
+        >
+          <MenuItem component={Link} to="/media/online-store" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Online Store
+          </MenuItem>
+          <MenuItem component={Link} to="/media/live-tv" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Live TV
+          </MenuItem>
+          <MenuItem component={Link} to="/media/e-books" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            E-Books
+          </MenuItem>
         </Menu>
-
+  
         <ListItem button onClick={handleContactClick}>
           <ListItemText primary="Contact Us" />
         </ListItem>
-        <Menu anchorEl={contactAnchorEl} open={Boolean(contactAnchorEl)} onClose={handleClose}>
-          <MenuItem component={Link} to="/contact-us/our-location" onClick={handleClose}>Our Location</MenuItem>
-          <MenuItem component={Link} to="/contact-us/new-christian" onClick={handleClose}>New Christian</MenuItem>
+        <Menu 
+        anchorEl={contactAnchorEl} 
+        open={Boolean(contactAnchorEl)} 
+        onClose={handleClose}
+          sx={{
+            marginLeft: '10px'
+          }}
+        >
+          <MenuItem component={Link} to="/contact-us/our-location" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            Our Location
+          </MenuItem>
+          <MenuItem component={Link} to="/contact-us/new-christian" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+            New Christian
+          </MenuItem>
         </Menu>
-
-        <ListItem button component={Link} to="/give">
+  
+        <ListItem button component={Link} to="/give" onClick={toggleDrawer(false)}>
           <ListItemText primary="Give" />
         </ListItem>
       </List>
+      <Box
+        sx={{
+          position:'absolute',
+          bottom:'0',
+          padding: 3
+        }}
+      >
+        <Typography variant={'body2'}>
+          Developer God'swill Ogono
+        </Typography>
+      </Box>
     </Box>
   );
+  
 
   return (
     <AppBar position="static">

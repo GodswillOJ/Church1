@@ -19,11 +19,11 @@ const Home = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const isSmallScreen = useMediaQuery('(max-width: 640px)');
   const updates = [
     'Join us for prayerful services by 5:30pm',
     'Bible study every Wednesday at 7:00pm',
-    'Youth choir and workers fellowship starts every Saturday at 4:00pm',
+    'Youth fellowship every Saturday at 4:00pm',
     'Sunday worship service at 10:00am',
   ];
 
@@ -171,8 +171,9 @@ const Home = () => {
       {/* Swiper Container */}
       <Box
         sx={{
-          width: { xs: '80%', md: '60%' },
+          width: { xs: '50%', sm: '60%', md: '60%', lg: '60%' }, // Adjust width for various screen sizes
           display: 'flex',
+          flexDirection: isSmallScreen ? 'column' : 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
           marginTop: 4,
@@ -183,38 +184,67 @@ const Home = () => {
           whiteSpace: 'nowrap',
         }}
       >
+        {/* The rest of the code remains unchanged */}
+
         <Box
           sx={{
             flexGrow: 1,
             display: 'flex',
+            flexDirection: isSmallScreen ? 'column' : 'row',
             justifyContent: 'start',
             alignItems: 'center',
             minHeight: '50px',
-            gap: 4,
             animation: 'scroll 10s linear infinite', // Continuous scrolling animation
+            width: { xs: '70%', sm: '80%', md: '90%', lg: '100%' }, // Responsive width
           }}
         >
           <Typography variant="body2"
             sx={{
               background: '#5b99c8',
-              padding: '8px',
+              padding: { xs: '6px', md: '8px' }, // Responsive padding
+              fontSize: { xs: '12px', md: '16px' }, // Responsive font size
               color: '#fff',
               borderRadius: '5px 0 0 5px',
-              marginRight: '8px',
+              marginRight: '4px',
             }}
           >
             Updates
           </Typography>
-          <Typography variant="body2">
-            {updates[currentUpdateIndex]}
-          </Typography>
+          <Box>
+            <Typography variant="body2"
+              sx={{
+                padding: { xs: '2px', md: '10px' }, // Responsive padding
+                fontSize: { xs: '8px', sm: '12px', md: '16px' }, // Responsive font size
+                margin: '10px'
+              }}
+            >
+              {updates[currentUpdateIndex]}
+            </Typography>
+          </Box>
         </Box>
-        <IconButton onClick={handlePrev}>
-          <ArrowBackIosIcon />
-        </IconButton>
-        <IconButton onClick={handleNext}>
-          <ArrowForwardIosIcon />
-        </IconButton>
+
+        {/* Responsive Icon Buttons */}
+        <Box>
+          <IconButton 
+            onClick={handlePrev} 
+            sx={{
+              fontSize: { xs: '16px', md: '24px' }, // Responsive icon size
+              padding: { xs: '6px', md: '12px' }, // Responsive padding
+            }}
+          >
+            <ArrowBackIosIcon sx={{ fontSize: { xs: '16px', md: '24px' } }} />
+          </IconButton>
+          <IconButton 
+            onClick={handleNext} 
+            sx={{
+              fontSize: { xs: '16px', md: '24px' }, // Responsive icon size
+              padding: { xs: '6px', md: '12px' }, // Responsive padding
+            }}
+          >
+            <ArrowForwardIosIcon sx={{ fontSize: { xs: '16px', md: '24px' } }} />
+          </IconButton>
+        </Box>
+
       </Box>
 
       {/* third container */}
