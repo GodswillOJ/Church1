@@ -74,7 +74,7 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
               fontStyle: 'normal', 
             }}
             >
-              Address: No 47 Ajah Lekki Lagos Nigeria
+              Address: Ajah Lekki Lagos Nigeria
             </Typography>
           </Box>
         </>

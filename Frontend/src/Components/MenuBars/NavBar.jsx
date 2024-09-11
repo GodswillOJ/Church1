@@ -44,11 +44,11 @@ function MyNavBar() {
       onKeyDown={toggleDrawer(false)}  // Keep this to close on key presses
     >
       <List>
-        <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
+        <ListItem  component={Link} to="/" onClick={toggleDrawer(false)}>
           <ListItemText primary="Home" />
         </ListItem>
         
-        <ListItem button onClick={handleAboutClick}>
+        <ListItem  onClick={handleAboutClick}>
           <ListItemText primary="About" />
         </ListItem>
         <Menu 
@@ -59,18 +59,18 @@ function MyNavBar() {
           marginLeft: '10px'
         }}
         >
-          <MenuItem component={Link} to="/about/our-mission" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/about/our-mission" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Our Mission
           </MenuItem>
-          <MenuItem component={Link} to="/about/our-vision" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/about/our-vision" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Our Vision
           </MenuItem>
-          <MenuItem component={Link} to="/about/our-hope" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/about/our-hope" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Our Hope
           </MenuItem>
         </Menu>
   
-        <ListItem button onClick={handleMediaClick}>
+        <ListItem onClick={handleMediaClick}>
           <ListItemText primary="Media" />
         </ListItem>
         <Menu 
@@ -81,18 +81,18 @@ function MyNavBar() {
             marginLeft: '10px'
           }}
         >
-          <MenuItem component={Link} to="/media/online-store" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/media/online-store" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Online Store
           </MenuItem>
-          <MenuItem component={Link} to="/media/live-tv" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/media/live-tv" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Live TV
           </MenuItem>
-          <MenuItem component={Link} to="/media/e-books" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/media/e-books" onClick={() => { handleClose(); toggleDrawer(false); }}>
             E-Books
           </MenuItem>
         </Menu>
   
-        <ListItem button onClick={handleContactClick}>
+        <ListItem onClick={handleContactClick}>
           <ListItemText primary="Contact Us" />
         </ListItem>
         <Menu 
@@ -103,15 +103,15 @@ function MyNavBar() {
             marginLeft: '10px'
           }}
         >
-          <MenuItem component={Link} to="/contact-us/our-location" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/contact-us/our-location" onClick={() => { handleClose(); toggleDrawer(false); }}>
             Our Location
           </MenuItem>
-          <MenuItem component={Link} to="/contact-us/new-christian" onClick={() => { handleClose(); toggleDrawer(false)(); }}>
+          <MenuItem component={Link} to="/contact-us/new-christian" onClick={() => { handleClose(); toggleDrawer(false); }}>
             New Christian
           </MenuItem>
         </Menu>
   
-        <ListItem button component={Link} to="/give" onClick={toggleDrawer(false)}>
+        <ListItem component={Link} to="/give" onClick={toggleDrawer(false)}>
           <ListItemText primary="Give" />
         </ListItem>
       </List>
