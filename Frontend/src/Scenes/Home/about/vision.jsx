@@ -11,7 +11,8 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
   return (
     <Box
         sx={{
-            display: 'block'
+            display: 'block',
+            margin: '5%'
         }}
     >
         <Box style={{ position: 'relative', width: '100%', margin: '10% auto',  }}>
@@ -19,7 +20,7 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
             <div
                 style={{
                     position: 'relative', // Make the parent div the reference for absolute positioning
-                    margin: 10,
+                    margin: '2% 2% 10% 2%',
                 }}
             >
                 <Box
@@ -27,6 +28,7 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
                     alt="backgroundImg"
                     src={gather}
                     width="100%"
+                    boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'
                     sx={{ 
                         objectFit: "cover", 
                         height: isSmallScreen ? "20rem" : "20rem", 
@@ -99,12 +101,14 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
                 style={{
                 position: 'relative', // Make the parent div the reference for absolute positioning
                 margin: 10,
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
             }}   
             >
                 <Box
                     component="img"
                     alt="backgroundImg"
                     src={cross2}
+                    boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'
                     width="100%"
                     // bottom= '0'
                     sx={{ objectFit: "cover", height: isSmallScreen ? "20rem" : "20rem",  mb: '0', overflowX: 'hidden' }}
