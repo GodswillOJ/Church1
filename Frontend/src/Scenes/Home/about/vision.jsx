@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, useMediaQuery, IconButton, Link } from '@mui/material';
+import { Box, Typography, useMediaQuery, Button, IconButton } from '@mui/material';
 import gather from '../../../Assets/home_images/gather.jpg';
 import cross2 from '../../../Assets/home_images/cross2.jpg';
 import Footer from '../../../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const Vision = () => {
 const isSmallScreen = useMediaQuery('(max-width:600px)');
@@ -128,6 +129,7 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
                     <Box sx={{ 
                         padding: isSmallScreen ? '10px' : '20px',
                         display: 'flex',
+                        gap: 10,
                         flexDirection: isSmallScreen ? 'column' : 'row'
                     }}>
                         <Typography
@@ -139,9 +141,10 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
                         fontStyle: 'normal', 
                         }}
                         >
-                        Our vision is to make heaven, to take many people along with us to make heaven, 
-                        to achieve this by living in righteousness, obeying God's word, 
-                        sharing the gospel and ultimately wining a soul.
+                            Mark 16:15-16 (KJV) reads: <br></br>
+
+                            And he said unto them, Go ye into all the world, and preach the gospel to every creature.
+                            He that believeth and is baptized shall be saved; but he that believeth not shall be damned.
                         </Typography>
                         <Typography
                         sx={{
@@ -158,6 +161,24 @@ const isSmallScreen = useMediaQuery('(max-width:600px)');
                     </>
                 </Box>
             </div>
+            <Box
+                sx={{
+                    textAlign: 'center',
+                    mt: 4
+                }}
+            >
+                <Button
+                    component={Link} 
+                    to="/gallery"
+                    sx={{
+                    color: '#fff',
+                    padding: '5px 20px 5px 20px',
+                    background: 'linear-gradient(to right, #3b0674, #33353a)'
+                    }}
+                >
+                Visit our gallery
+                </Button>
+            </Box>
         </Box>
         <Footer/>
     </Box>

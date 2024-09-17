@@ -69,12 +69,14 @@ const Home = () => {
     >
       {/* First Container */}
       <Box
+        mt={4}
         sx={{
           width: { xs: '100%', md: '80%' },
           height: 300,
           backgroundImage: `url(${images[currentImageIndex] || alternateImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           opacity: fade ? 1 : 0,
           transition: 'opacity 1s ease-in-out', // Smooth fade effect
         }}
@@ -84,9 +86,11 @@ const Home = () => {
 
       {/* Second Container */}
       <Box
+        mt={4}
         sx={{
           width: { xs: '60%', md: '60%' },
           padding: 2,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
         }}
       >
         <Box marginBottom={2}>
@@ -109,6 +113,7 @@ const Home = () => {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   marginBottom: 2,
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                 }}
               />
               <Typography
@@ -139,6 +144,7 @@ const Home = () => {
                   height: 200,
                   backgroundImage: `url(${hear})`,
                   backgroundSize: 'cover',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                   backgroundPosition: 'center',
                   marginBottom: 2,
                 }}
@@ -250,12 +256,14 @@ const Home = () => {
       {/* third container */}
       <Box
         marginBottom={2}
+        mt={5}
         sx={{
           width: { xs: '60%', md: '60%' },
           padding: 2,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
         }}
       >
-        <Typography variant="h4" sx={{ textAlign: 'center' }} gutterBottom>
+        <Typography variant="h4" sx={{ textAlign: 'center', padding: '10px' }} gutterBottom>
           Work by faith
         </Typography>
 
@@ -273,6 +281,7 @@ const Home = () => {
               backgroundImage: `url(${images2[currentImageIndex] || alternateImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
               marginBottom: 2,
               opacity: fade ? 1 : 0,
               transition: 'opacity 1s ease-in-out', // Smooth fade effect
@@ -299,6 +308,10 @@ const Home = () => {
       alignItems="center"
       padding={2}
       gap='10px'
+      sx={{
+        mt: 2,
+        mb: 2
+      }}
     >
       {/* First Child Container */}
       <Box

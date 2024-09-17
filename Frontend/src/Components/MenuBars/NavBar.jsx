@@ -142,7 +142,15 @@ function MyNavBar() {
           padding: '0 10px',
         }}
       >
-        <Typography variant='body1' sx={{ fontStyle: 'italic', fontSize: isMobile ? '16px' : '18px' }}>
+        <Typography 
+        variant='body1'
+        component={Link}
+        to='/'
+        sx={{ fontStyle: 'italic', 
+        fontSize: isMobile ? '16px' : '18px',
+        color:'#fff',
+        textDecoration: 'none'
+        }}>
           GOtech_church
         </Typography>
 
